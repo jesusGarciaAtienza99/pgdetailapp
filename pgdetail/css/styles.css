@@ -46,21 +46,7 @@ header {
 /* =======================
    NAV
 ======================= */
-nav {
-  display: flex;
-  gap: 20px;
-}
 
-nav a {
-  text-decoration: none;
-  color: #555;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #000;
-}
 
 /* NAV MÓVIL (HAMBURGUESA) */
 .hamburger {
@@ -141,12 +127,7 @@ h2 {
 /* =======================
    CARDS DE SERVICIOS
 ======================= */
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
+
 
 .card {
   width: 270px;
@@ -237,23 +218,7 @@ footer {
 ======================= */
 @media (max-width: 800px) {
 
-  nav {
-    position: absolute;
-    top: 75px;
-    right: 0;
-    background: #ffffff;
-    width: 200px;
-    flex-direction: column;
-    text-align: right;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    border-radius: 0 0 0 12px;
-    display: none;
-  }
 
-  nav.show {
-    display: flex;
-  }
 
   .hamburger {
     display: flex;
@@ -271,4 +236,24 @@ footer {
   .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
   }
+  
+  
+}
+.social-icon {
+  font-size: 2rem;
+  color: #333;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.social-icon.whatsapp {
+  color: #25D366;
+}
+
+.social-icon.instagram {
+  color: #555;
 }
