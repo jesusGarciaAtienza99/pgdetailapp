@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
+import logo from './resources/pgdetail_logo.png';
 
 function ServiceDetail({ services }) {
   const { slug } = useParams();
@@ -8,7 +9,10 @@ function ServiceDetail({ services }) {
     return (
       <div className="page">
         <header className="header">
-          <Link className="brand" to="/">PG Detail</Link>
+          <Link className="brand" to="/">
+            <img src={logo} alt="PG Detail" className="logo" />
+            <span>PG Detail</span>
+          </Link>
         </header>
         <main className="section section-alt">
           <div className="section-inner">
@@ -24,11 +28,14 @@ function ServiceDetail({ services }) {
   return (
     <div className="page">
       <header className="header">
-        <Link className="brand" to="/">PG Detail</Link>
+        <Link className="brand" to="/">
+          <img src={logo} alt="PG Detail" className="logo" />
+          <span>PG Detail</span>
+        </Link>
         <nav className="nav">
           <a href="/#servicios">Servicios</a>
           <a href="/#galeria">Galería</a>
-          <a href="/#conocenos">Conócenos</a>
+          <a href="/#nosotros">Nosotros</a>
           <a href="/#contacto">Contacto</a>
         </nav>
       </header>
@@ -36,7 +43,7 @@ function ServiceDetail({ services }) {
       <main>
         <section className="hero hero-detail">
           <div className="hero-content">
-            <span>Servicio detallado</span>
+            <span>Servicio especializado</span>
             <h1>{service.title}</h1>
             <p>{service.detail.subtitle}</p>
           </div>
@@ -44,8 +51,8 @@ function ServiceDetail({ services }) {
 
         <section className="section">
           <div className="section-inner service-detail-content">
-            <h2>Detalles del servicio</h2>
-            <p>{service.description}</p>
+            <h2 style={{ display: 'block' }}>Detalles del Servicio</h2>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '30px' }}>{service.description}</p>
             {service.detail.sections.map((section) => (
               <div key={section.heading} className="service-detail-list">
                 <h4>{section.heading}</h4>
@@ -65,14 +72,14 @@ function ServiceDetail({ services }) {
               </div>
             )}
             <div className="service-detail-footer">
-              <Link className="button" to="/">Volver a servicios</Link>
+              <Link className="button" to="/">Volver a Servicios</Link>
             </div>
           </div>
         </section>
       </main>
 
       <footer className="footer">
-        <p>© 2026 PG Detail. Todos los derechos reservados.</p>
+        <p>© 2026 PG Detail. Diseñado para la excelencia. Todos los derechos reservados.</p>
       </footer>
     </div>
   );
