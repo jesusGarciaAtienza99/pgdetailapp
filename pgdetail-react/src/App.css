@@ -39,12 +39,11 @@
 }
 
 .logo {
-  width: 45px;
-  height: 45px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   border-radius: 8px;
-  border: 1px solid var(--accent);
-  padding: 4px;
+  padding: 2px;
 }
 
 .nav {
@@ -313,6 +312,13 @@
   overflow: hidden;
   border: 1px solid rgba(0, 229, 255, 0.15);
   border-radius: 8px;
+}
+
+.slider-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  margin-top: 32px;
 }
 
 .before-after-image {
