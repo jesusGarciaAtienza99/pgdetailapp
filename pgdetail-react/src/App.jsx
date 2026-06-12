@@ -1,8 +1,14 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import logo from './resources/pgdetail_logo.png';
+import logo from './resources/pgdetail_logo_blanco.png';
 import BeforeAfterSlider from './BeforeAfterSlider.jsx';
 import ServiceDetail from './ServiceDetail.jsx';
+import beforeCupra from './resources/cupralimpio.jpeg';
+import afterCupra from './resources/cuprasucio.jpeg';
+import beforeRenault from './resources/renaultlimpio.jpeg';
+import afterRenault from './resources/renaultsucio.jpeg';
+import before1 from './resources/traserolimpio.jpeg';
+import after1 from './resources/traserosucio.jpeg';
 
 const services = [
   {
@@ -166,11 +172,22 @@ const services = [
   }
 ];
 
-const gallery = [
-  'https://images.unsplash.com/photo-1607860340706-869f7ddfb1a9?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1607860318579-4a5f6a25c5e4?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1599232386681-425f3dbfcab4?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1607860270418-45899f97f8e1?auto=format&fit=crop&w=800&q=80'
+const sliderPairs = [
+  {
+    title: 'Renault Antes / Después',
+    before: beforeRenault,
+    after: afterRenault
+  },
+  {
+    title: 'Cupra Antes / Después',
+    before: beforeCupra,
+    after: afterCupra
+  },
+  {
+    title: 'Transformación Premium',
+    before: before1,
+    after: after1
+  }
 ];
 
 function HomePage() {
@@ -223,11 +240,15 @@ function HomePage() {
         <section id="galeria" className="section section-alt">
           <div className="section-inner">
             <h2>Antes y después</h2>
-            <p>Observa el poder de nuestro trabajo. Cada imagen cuenta la historia de un vehículo restaurado a su esplendor original.</p>
-            <BeforeAfterSlider />
-            <div className="gallery">
-              {gallery.map((src, index) => (
-                <img key={index} src={src} alt={`Proyecto ${index + 1}`} />
+            <p>Observa el poder de nuestro trabajo. Cada slider muestra el porcentaje real del antes y el después.</p>
+            <div className="slider-grid">
+              {sliderPairs.map((pair) => (
+                <BeforeAfterSlider
+                  key={pair.title}
+                  beforeImage={pair.before}
+                  afterImage={pair.after}
+                  label={pair.title}
+                />
               ))}
             </div>
           </div>

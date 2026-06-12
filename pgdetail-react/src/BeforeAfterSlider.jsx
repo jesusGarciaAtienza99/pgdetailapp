@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import before1 from './resources/cupralimpio.jpeg';
-import after1 from './resources/cuprasucio.jpeg';
 
-function BeforeAfterSlider() {
+function BeforeAfterSlider({ beforeImage, afterImage, label }) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
 
@@ -53,12 +51,12 @@ function BeforeAfterSlider() {
     >
       <div className="before-after-wrapper">
         <img 
-          src={before1}
+          src={beforeImage}
           alt="Before"
           className="before-after-image before"
         />
         <img 
-          src={after1}
+          src={afterImage}
           alt="After"
           className="before-after-image after"
           style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
@@ -69,7 +67,7 @@ function BeforeAfterSlider() {
           <div className="slider-arrow right-arrow">❯</div>
         </div>
       </div>
-      <p className="before-after-label">Desliza para ver la transformación</p>
+      <p className="before-after-label">{label || 'Desliza para ver la transformación'}</p>
     </div>
   );
 }
