@@ -197,17 +197,6 @@
   text-transform: uppercase;
   color: var(--text-primary);
   margin: 0 0 16px 0;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.section h2::before {
-  content: '';
-  display: inline-block;
-  width: 40px;
-  height: 2px;
-  background: var(--accent);
 }
 
 .section > .section-inner > p {
@@ -311,12 +300,15 @@
 .before-after-container {
   margin: 50px 0;
   cursor: col-resize;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .before-after-wrapper {
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
   overflow: hidden;
   border: 1px solid rgba(0, 229, 255, 0.15);
@@ -334,17 +326,17 @@
 }
 
 .before-after-image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  overflow: hidden;
+  display: none;
 }
 
 .after {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .before-after-slider-handle {
@@ -387,6 +379,16 @@
 
 .right-arrow {
   right: -60px;
+}
+
+@media (max-width: 768px) {
+  .left-arrow {
+    left: -45px;
+  }
+
+  .right-arrow {
+    right: -45px;
+  }
 }
 
 .before-after-label {
@@ -434,17 +436,6 @@
 
 .contact-grid > div:first-child h2 {
   margin-top: 0;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.contact-grid > div:first-child h2::before {
-  content: '';
-  display: inline-block;
-  width: 40px;
-  height: 2px;
-  background: var(--accent);
 }
 
 .contact-grid p {
@@ -505,16 +496,6 @@
   text-transform: uppercase;
   color: var(--text-primary);
   margin: 0 0 16px 0;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.service-detail-list h4::before {
-  content: '';
-  width: 24px;
-  height: 2px;
-  background: var(--accent);
 }
 
 .service-detail-list ul {
@@ -674,10 +655,6 @@
 
   .section h2 {
     font-size: 1.8rem;
-  }
-
-  .section h2::before {
-    width: 30px;
   }
 
   .gallery {

@@ -222,7 +222,7 @@ function HomePage() {
 
         <section id="galeria" className="section section-alt">
           <div className="section-inner">
-            <h2>Transformaciones</h2>
+            <h2>Antes y después</h2>
             <p>Observa el poder de nuestro trabajo. Cada imagen cuenta la historia de un vehículo restaurado a su esplendor original.</p>
             <BeforeAfterSlider />
             <div className="gallery">
