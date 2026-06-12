@@ -1,14 +1,22 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import logo from './resources/pgdetail_logo.png';
+import logo from './resources/pgdetail_logo_blanco.png';
+import BeforeAfterSlider from './BeforeAfterSlider.jsx';
 import ServiceDetail from './ServiceDetail.jsx';
+import beforeCupra from './resources/cupralimpio.jpeg';
+import afterCupra from './resources/cuprasucio.jpeg';
+import beforeRenault from './resources/renaultlimpio.jpeg';
+import afterRenault from './resources/renaultsucio.jpeg';
+import before1 from './resources/traserolimpio.jpeg';
+import after1 from './resources/traserosucio.jpeg';
 
 const services = [
   {
     slug: 'limpieza-premium',
     title: 'Limpieza Premium',
-    description: 'Cuidado completo del interior y exterior con acabado profesional.',
+    description: 'Limpieza exhaustiva del interior y exterior con cuidado quirúrgico.',
     image: 'https://images.unsplash.com/photo-1622015663314-2a4a3953f5a8?auto=format&fit=crop&w=800&q=80',
+    icon: '✨',
     detail: {
       subtitle: 'Servicio completo de limpieza interior y exterior, ideal para mantener tu coche en perfecto estado.',
       sections: [
@@ -36,8 +44,9 @@ const services = [
   {
     slug: 'limpieza-integral',
     title: 'Limpieza Integral',
-    description: 'Tratamiento a fondo para eliminar olores, moho y suciedad incrustada.',
+    description: 'Tratamiento profundo para eliminar olores, moho y suciedad incrustada.',
     image: 'https://images.unsplash.com/photo-1623688573604-7a1a71d9a421?auto=format&fit=crop&w=800&q=80',
+    icon: '🔬',
     detail: {
       subtitle: 'Con este servicio buscamos acercarnos a la perfección, realizando una limpieza profunda y detallada tanto en el interior como en el exterior del vehículo.',
       sections: [
@@ -66,9 +75,10 @@ const services = [
   },
   {
     slug: 'pulidos-carroceria',
-    title: 'Pulidos de Carrocería',
-    description: 'Eliminamos marcas y devolvemos el brillo a la pintura.',
+    title: 'Pulido de Pintura',
+    description: 'Corrección profesional de la pintura para un acabado espejo.',
     image: 'https://images.unsplash.com/photo-1607860108855-0c622d584f82?auto=format&fit=crop&w=800&q=80',
+    icon: '💎',
     detail: {
       subtitle: 'El proceso inicial comienza con una limpieza profunda de la carrocería y la descontaminación de la pintura.',
       sections: [
@@ -87,9 +97,10 @@ const services = [
   },
   {
     slug: 'protecciones',
-    title: 'Protecciones',
-    description: 'Sellado y protección para mantener el acabado impecable por más tiempo.',
+    title: 'Revestimiento Cerámico',
+    description: 'Protección duradera contra elementos externos con acabado de espejo profundo.',
     image: 'https://images.unsplash.com/photo-1607860263546-9ee57f245dc9?auto=format&fit=crop&w=800&q=80',
+    icon: '🛡️',
     detail: {
       subtitle: 'Las protecciones dan brillo, profundidad y resistencia frente a agentes externos como cal, mosquitos o contaminación.',
       sections: [
@@ -116,68 +127,81 @@ const services = [
     }
   },
   {
-    slug: 'pulidos-faros',
-    title: 'Pulido de Faros',
-    description: 'Recuperamos la transparencia y seguridad de tus faros.',
+    slug: 'detalle-interior',
+    title: 'Detalle Interior',
+    description: 'Restauración profunda del habitáculo para una experiencia de lujo.',
     image: 'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80',
+    icon: '🎯',
     detail: {
-      subtitle: 'El pulido de faros elimina el amarillamiento y mejora la iluminación nocturna.',
+      subtitle: 'Transformación completa del interior con productos premium de la más alta calidad.',
       sections: [
         {
-          heading: 'Qué incluye',
+          heading: 'Servicios incluidos',
           items: [
-            'Limpieza y desengrase del faro',
-            'Pulido con abrasivos específicos',
-            'Protección final anti-amarillamiento',
-            'Revisión de óptica y transparencia'
+            'Limpieza y tratamiento de cuero',
+            'Reconocimiento y protección de plásticos',
+            'Aromatización premium',
+            'Detallado de accesorios metálicos'
           ]
         }
       ],
-      note: 'Ideal para mejorar la seguridad y mantener un aspecto moderno del vehículo.'
+      note: 'Perfecto para mantener el lujo y confort del interior de tu vehículo.'
     }
   },
   {
-    slug: 'otros-servicios',
-    title: 'Otros Servicios',
-    description: 'Soluciones adicionales para mantener tu vehículo en perfecto estado.',
-    image: 'https://images.unsplash.com/photo-1607860263546-9ee57f245dc9?auto=format&fit=crop&w=800&q=80',
+    slug: 'mantenimiento-experto',
+    title: 'Plan de Mantenimiento',
+    description: 'Programa personalizado de cuidado continuo para máxima preservación.',
+    image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80',
+    icon: '⚙️',
     detail: {
-      subtitle: 'Ofrecemos servicios complementarios adaptados a cada necesidad de tu coche.',
+      subtitle: 'Mantén tu vehículo en condiciones de concesionario con nuestro programa de mantenimiento trimestral.',
       sections: [
         {
-          heading: 'Incluye',
+          heading: 'Beneficios',
           items: [
-            'Limpieza de tapicería y cuero',
-            'Tratamientos de ozono y eliminación de olores',
-            'Restauración de plásticos y llantas',
-            'Pequeños retoques de pintura y mantenimiento de interior'
+            'Inspección completa cada trimestre',
+            'Retoques de protección cerámico',
+            'Fresado de acabado cuando sea necesario',
+            'Asesoría personalizada incluida'
           ]
         }
       ],
-      note: 'Perfecto para casos específicos que requieren un trabajo más personalizado.'
+      note: 'La mejor inversión para preservar el valor y belleza de tu automóvil.'
     }
   }
 ];
 
-const gallery = [
-  'https://images.unsplash.com/photo-1607860340706-869f7ddfb1a9?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1607860318579-4a5f6a25c5e4?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1599232386681-425f3dbfcab4?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1607860270418-45899f97f8e1?auto=format&fit=crop&w=800&q=80'
+const sliderPairs = [
+  {
+    title: 'Renault Antes / Después',
+    before: beforeRenault,
+    after: afterRenault
+  },
+  {
+    title: 'Cupra Antes / Después',
+    before: beforeCupra,
+    after: afterCupra
+  },
+  {
+    title: 'Transformación Premium',
+    before: before1,
+    after: after1
+  }
 ];
 
 function HomePage() {
   return (
     <div className="page">
       <header className="header">
-        <Link className="brand brand-logo" to="/">
+        <Link className="brand" to="/">
           <img src={logo} alt="PG Detail" className="logo" />
           <span>PG Detail</span>
         </Link>
         <nav className="nav">
           <a href="/#servicios">Servicios</a>
           <a href="/#galeria">Galería</a>
-          <a href="/#conocenos">Conócenos</a>
+          <a href="/#nosotros">Nosotros</a>
           <a href="/#contacto">Contacto</a>
         </nav>
       </header>
@@ -185,26 +209,26 @@ function HomePage() {
       <main>
         <section id="home" className="hero">
           <div className="hero-content">
-            <span>Detalle profesional de coches</span>
-            <h1>Cuidamos cada centímetro de tu vehículo</h1>
-            <p>Diseñamos un servicio personalizado para que tu coche esté siempre impecable.</p>
-            <a className="button" href="/#contacto">Pedir presupuesto</a>
+            <span>La perfección hecha reflejo</span>
+            <h1>Detallado de Lujo para Exigentes</h1>
+            <p>Donde la precisión alemana se encuentra con el lujo italiano. Transformamos tu vehículo en una obra maestra.</p>
+            <a className="button" href="/#servicios">Explorar Servicios</a>
           </div>
         </section>
 
         <section id="servicios" className="section">
           <div className="section-inner">
-            <h2>Servicios</h2>
-            <p>Trabajamos con técnicas avanzadas para limpieza, pulido y protección de tu coche.</p>
+            <h2>Nuestros Servicios</h2>
+            <p>Cada servicio es diseñado con obsesión por los detalles. Utilizamos únicamente productos de marcas internacionales certificadas.</p>
             <div className="cards">
               {services.map((service) => (
                 <article key={service.slug} className="card">
-                  <img src={service.image} alt={service.title} />
+                  <div className="card-icon">{service.icon}</div>
                   <div className="card-body">
                     <h3>{service.title}</h3>
                     <p>{service.description}</p>
                     <Link className="button button-small" to={`/servicios/${service.slug}`}>
-                      Más info
+                      Detalles
                     </Link>
                   </div>
                 </article>
@@ -215,21 +239,27 @@ function HomePage() {
 
         <section id="galeria" className="section section-alt">
           <div className="section-inner">
-            <h2>Galería Antes y Después</h2>
-            <div className="gallery">
-              {gallery.map((src, index) => (
-                <img key={index} src={src} alt={`Galería ${index + 1}`} />
+            <h2>Antes y después</h2>
+            <p>Observa el poder de nuestro trabajo. Cada slider muestra el porcentaje real del antes y el después.</p>
+            <div className="slider-grid">
+              {sliderPairs.map((pair) => (
+                <BeforeAfterSlider
+                  key={pair.title}
+                  beforeImage={pair.before}
+                  afterImage={pair.after}
+                  label={pair.title}
+                />
               ))}
             </div>
           </div>
         </section>
 
-        <section id="conocenos" className="section">
+        <section id="nosotros" className="section">
           <div className="section-inner content-block">
-            <h2>Conócenos</h2>
-            <p>Somos un equipo especializado en detailing y limpieza profunda para coches, ubicado en Navalcarnero.</p>
-            <p>Ofrecemos experiencia, productos de calidad y un trabajo cuidadoso para mantener tu vehículo como nuevo.</p>
-            <p>Si tienes una flota, vehículo clásico o necesitas un trabajo a medida, te ayudamos con soluciones personalizadas.</p>
+            <h2>Sobre PG Detail</h2>
+            <p>Somos un equipo de especialistas certificados en detallado de vehículos de lujo, con más de tres años de experiencia perfeccionando nuestro oficio. Cada miembro de nuestro equipo ha recibido capacitación avanzada de las marcas líderes mundiales en detallado.</p>
+            <p>Nuestro compromiso es simple: tu vehículo merece el mismo nivel de precisión y cuidado que la ingeniería que lo creó. Utilizamos exclusivamente productos de marcas reconocidas internacionalmente certificadas, tales como ZVIZZER, System X, y VONIX.</p>
+            <p>Ubicados en el corazón de Navalcarnero, contamos con un facility de clase mundial donde cada detalle es tratado como un acto de artesanía.</p>
           </div>
         </section>
 
@@ -240,17 +270,19 @@ function HomePage() {
               <p>📍 Navalcarnero, Madrid · C/ de la Industria 6</p>
               <p>📞 (+34) 640 25 81 89</p>
               <p>📧 pablogutierrezdecea@gmail.com</p>
+              <p style={{ marginTop: '20px', fontSize: '0.9rem' }}>Horario: Lunes a Viernes, 9:00 - 18:00</p>
             </div>
             <div className="socials">
-              <a href="https://wa.me/34640258189" target="_blank" rel="noreferrer">WhatsApp</a>
-              <a href="https://www.instagram.com/_pgdetail" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="https://wa.me/34640258189" target="_blank" rel="noreferrer">💬 Consulta por WhatsApp</a>
+              <a href="https://www.instagram.com/_pgdetail" target="_blank" rel="noreferrer">📷 Síguenos en Instagram</a>
+              <a href="mailto:pablogutierrezdecea@gmail.com">✉️ Envía un Email</a>
             </div>
           </div>
         </section>
       </main>
 
       <footer className="footer">
-        <p>© 2026 PG Detail. Todos los derechos reservados.</p>
+        <p>© 2026 PG Detail. Diseñado para la excelencia. Todos los derechos reservados.</p>
       </footer>
     </div>
   );
