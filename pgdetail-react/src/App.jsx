@@ -3,6 +3,7 @@ import './App.css';
 import logo from './resources/pgdetail_logo_blanco.png';
 import BeforeAfterSlider from './BeforeAfterSlider.jsx';
 import ServiceDetail from './ServiceDetail.jsx';
+import ReservationForm from './components/ReservationForm.jsx';
 import beforeCupra from './resources/cupralimpio.jpeg';
 import afterCupra from './resources/cuprasucio.jpeg';
 import beforeRenault from './resources/renaultlimpio.jpeg';
@@ -203,6 +204,7 @@ function HomePage() {
           <a href="/#galeria">Galería</a>
           <a href="/#nosotros">Nosotros</a>
           <a href="/#contacto">Contacto</a>
+          <Link to="/reservas" className="nav-link-reservas">Reservar</Link>
         </nav>
       </header>
 
@@ -288,12 +290,29 @@ function HomePage() {
   );
 }
 
+function ReservationsPage() {
+  return (
+    <div>
+      <header className="header">
+        <Link to="/" className="logo">
+          <img src={logo} alt="PG Detail Logo" />
+        </Link>
+        <nav className="nav">
+          <Link to="/" className="nav-back">← Volver</Link>
+        </nav>
+      </header>
+      <ReservationForm />
+    </div>
+  );
+}
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/servicios/:slug" element={<ServiceDetail services={services} />} />
+        <Route path="/reservas" element={<ReservationsPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
     </BrowserRouter>

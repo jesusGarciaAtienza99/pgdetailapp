@@ -565,6 +565,39 @@
   font-size: 0.9rem;
 }
 
+/* ========== RESERVATIONS ========== */
+
+.nav-link-reservas {
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8555 100%) !important;
+  color: #fff !important;
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+}
+
+.nav-link-reservas::after {
+  display: none !important;
+}
+
+.nav-link-reservas:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4) !important;
+}
+
+.nav-back {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  background: rgba(255, 107, 53, 0.2);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-back:hover {
+  background: rgba(255, 107, 53, 0.4);
+  color: #fff !important;
+}
+
 /* ========== RESPONSIVE ========== */
 
 @media (max-width: 1024px) {
