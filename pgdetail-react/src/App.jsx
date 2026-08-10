@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import logo from './resources/pgdetail_logo_blanco.png';
@@ -138,8 +139,7 @@ const services = [
           heading: 'Proceso de restauración',
           items: [
             'Inspección inicial y preparación del faro',
-            'Limpieza y decapado de residuos y oxidación',
-            'Pulido con compuestos específicos para eliminar micro-rayas y amarilleo',
+            'Pulido con compuestos específicos para eliminar micro-rayas.',
             'Aplicación de sellado protector UV para prolongar la claridad'
           ]
         },
@@ -153,7 +153,7 @@ const services = [
           ]
         }
       ],
-      note: 'Servicio recomendado para mejorar seguridad y estética; duración típica 2-4 horas según estado del faro.',
+      note: 'Servicio recomendado para mejorar seguridad y estética.',
       extra: 'Recomendamos reaplicar sellado UV cada 6-12 meses para mantener resultados óptimos.'
     }
   },
@@ -197,6 +197,71 @@ const sliderPairs = [
     after: after1
   }
 ];
+
+const galleryImages = [
+  {
+    src: 'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1400&q=80',
+    caption: 'Trabajo de detallado con acabado semibrillante'
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1519638399535-1b036603ac77?auto=format&fit=crop&w=1400&q=80',
+    caption: 'Reflejos y limpieza profunda en superficies exteriores'
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80',
+    caption: 'Cuidado premium en acabados de pintura y detalles'
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1549921296-3a30fd4cecc9?auto=format&fit=crop&w=1400&q=80',
+    caption: 'Vehículo con resultado limpio y preparado para entrega'
+  },
+  {
+    src: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1400&q=80',
+    caption: 'Últimos retoques antes de la entrega al cliente'
+  }
+];
+
+function GalleryCarousel({ images }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const itemRefs = useRef([]);
+
+  const scrollToIndex = (index) => {
+    const boundedIndex = Math.max(0, Math.min(images.length - 1, index));
+    setActiveIndex(boundedIndex);
+    itemRefs.current[boundedIndex]?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  };
+
+  const handlePrev = () => scrollToIndex(activeIndex - 1);
+  const handleNext = () => scrollToIndex(activeIndex + 1);
+
+  return (
+    <div className="gallery-carousel">
+      <div className="carousel-wrapper">
+        <div className="carousel-track">
+          {images.map((item, index) => (
+            <div
+              key={item.src}
+              className={`carousel-item ${index === activeIndex ? 'active' : ''}`}
+              ref={(el) => (itemRefs.current[index] = el)}
+            >
+              <img src={item.src} alt={item.caption} />
+              <div className="carousel-caption">{item.caption}</div>
+            </div>
+          ))}
+        </div>
+        <div className="carousel-fade"></div>
+        <div className="carousel-nav">
+          <button className="carousel-button" onClick={handlePrev} disabled={activeIndex === 0} aria-label="Anterior">
+            ❮
+          </button>
+          <button className="carousel-button" onClick={handleNext} disabled={activeIndex === images.length - 1} aria-label="Siguiente">
+            ❯
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function HomePage() {
   return (
@@ -258,6 +323,15 @@ function HomePage() {
                   label={pair.title}
                 />
               ))}
+            </div>
+            <div className="gallery-section">
+              <div className="gallery-header">
+                <div>
+                  <h3>Más resultados reales</h3>
+                  <p>Desliza la galería para ver más ejemplos de nuestros trabajos.</p>
+                </div>
+              </div>
+              <GalleryCarousel images={galleryImages} />
             </div>
           </div>
         </section>
