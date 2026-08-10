@@ -7,14 +7,14 @@ import beforeCupra from './resources/cupralimpio.jpeg';
 import afterCupra from './resources/cuprasucio.jpeg';
 import beforeRenault from './resources/renaultlimpio.jpeg';
 import afterRenault from './resources/renaultsucio.jpeg';
-import before1 from './resources/traserolimpio.jpeg';
-import after1 from './resources/traserosucio.jpeg';
+import before1 from './resources/a3_limpio.jpeg';
+import after1 from './resources/a3_sucio.jpeg';
 
 const services = [
   {
     slug: 'limpieza-premium',
     title: 'Limpieza Premium',
-    description: 'Limpieza exhaustiva del interior y exterior con cuidado quirúrgico.',
+    description: 'Limpieza completa del vehículo.',
     image: 'https://images.unsplash.com/photo-1622015663314-2a4a3953f5a8?auto=format&fit=crop&w=800&q=80',
     icon: '✨',
     detail: {
@@ -44,7 +44,7 @@ const services = [
   {
     slug: 'limpieza-integral',
     title: 'Limpieza Integral',
-    description: 'Tratamiento profundo para eliminar olores, moho y suciedad incrustada.',
+    description: 'Limpieza profunda y detallada, llegando a cada rincón del vehículo.',
     image: 'https://images.unsplash.com/photo-1623688573604-7a1a71d9a421?auto=format&fit=crop&w=800&q=80',
     icon: '🔬',
     detail: {
@@ -64,8 +64,7 @@ const services = [
           items: [
             'Lavado a mano del vehículo',
             'Limpieza de llantas y pasos de rueda',
-            'Limpieza de marcos de las puertas',
-            'Sellado de la carrocería con duración de 3 meses'
+            'Limpieza de marcos de las puertas'
           ]
         }
       ],
@@ -88,7 +87,7 @@ const services = [
             'Preparación del vehículo con limpieza y descontaminación de la pintura',
             'Evaluación del estado de la pintura y definición del tipo de pulido',
             'Pulido en uno, dos o tres pasos según la profundidad de los defectos',
-            'En arañados profundos, lijado cuidadoso antes del pulido final'
+            'En arañazos profundos, lijado cuidadoso antes del pulido final si fuera necesario'
           ]
         }
       ],
@@ -97,8 +96,8 @@ const services = [
   },
   {
     slug: 'protecciones',
-    title: 'Revestimiento Cerámico',
-    description: 'Protección duradera contra elementos externos con acabado de espejo profundo.',
+    title: 'Tratamiento Cerámico',
+    description: 'Protección cerámica duradera que realza el brillo y repele la suciedad.',
     image: 'https://images.unsplash.com/photo-1607860263546-9ee57f245dc9?auto=format&fit=crop&w=800&q=80',
     icon: '🛡️',
     detail: {
@@ -127,25 +126,35 @@ const services = [
     }
   },
   {
-    slug: 'detalle-interior',
-    title: 'Detalle Interior',
-    description: 'Restauración profunda del habitáculo para una experiencia de lujo.',
-    image: 'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80',
-    icon: '🎯',
+    slug: 'restauracion-faros',
+    title: 'RESTAURACION DE FAROS',
+    description: 'Restauración y pulido profesional de faros para recuperar visibilidad y estética.',
+    image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80',
+    icon: '🔆',
     detail: {
-      subtitle: 'Transformación completa del interior con productos premium de la más alta calidad.',
+      subtitle: 'Recuperamos la transparencia y funcionalidad de tus faros mediante un proceso profesional y protección UV.',
       sections: [
         {
-          heading: 'Servicios incluidos',
+          heading: 'Proceso de restauración',
           items: [
-            'Limpieza y tratamiento de cuero',
-            'Reconocimiento y protección de plásticos',
-            'Aromatización premium',
-            'Detallado de accesorios metálicos'
+            'Inspección inicial y preparación del faro',
+            'Limpieza y decapado de residuos y oxidación',
+            'Pulido con compuestos específicos para eliminar micro-rayas y amarilleo',
+            'Aplicación de sellado protector UV para prolongar la claridad'
+          ]
+        },
+        {
+          heading: 'Beneficios',
+          items: [
+            'Mejora inmediata de la visibilidad nocturna',
+            'Recupera el aspecto original del vehículo',
+            'Aumenta la seguridad y el valor estético',
+            'Protección prolongada frente a re-amarilleo'
           ]
         }
       ],
-      note: 'Perfecto para mantener el lujo y confort del interior de tu vehículo.'
+      note: 'Servicio recomendado para mejorar seguridad y estética; duración típica 2-4 horas según estado del faro.',
+      extra: 'Recomendamos reaplicar sellado UV cada 6-12 meses para mantener resultados óptimos.'
     }
   },
   {
@@ -162,7 +171,6 @@ const services = [
           items: [
             'Inspección completa cada trimestre',
             'Retoques de protección cerámico',
-            'Fresado de acabado cuando sea necesario',
             'Asesoría personalizada incluida'
           ]
         }
@@ -184,7 +192,7 @@ const sliderPairs = [
     after: afterCupra
   },
   {
-    title: 'Transformación Premium',
+    title: 'A3 Antes / Después',
     before: before1,
     after: after1
   }
@@ -209,9 +217,9 @@ function HomePage() {
       <main>
         <section id="home" className="hero">
           <div className="hero-content">
-            <span>La perfección hecha reflejo</span>
+            <span>Cuidamos cada detalle</span>
             <h1>Detallado de Lujo para Exigentes</h1>
-            <p>Donde la precisión alemana se encuentra con el lujo italiano. Transformamos tu vehículo en una obra maestra.</p>
+            <p>Especialistas en el cuidado de tu vehículo con el más alto nivel de calidad y atención al detalle.</p>
             <a className="button" href="/#servicios">Explorar Servicios</a>
           </div>
         </section>
@@ -257,9 +265,8 @@ function HomePage() {
         <section id="nosotros" className="section">
           <div className="section-inner content-block">
             <h2>Sobre PG Detail</h2>
-            <p>Somos un equipo de especialistas certificados en detallado de vehículos de lujo, con más de tres años de experiencia perfeccionando nuestro oficio. Cada miembro de nuestro equipo ha recibido capacitación avanzada de las marcas líderes mundiales en detallado.</p>
-            <p>Nuestro compromiso es simple: tu vehículo merece el mismo nivel de precisión y cuidado que la ingeniería que lo creó. Utilizamos exclusivamente productos de marcas reconocidas internacionalmente certificadas, tales como ZVIZZER, System X, y VONIX.</p>
-            <p>Ubicados en el corazón de Navalcarnero, contamos con un facility de clase mundial donde cada detalle es tratado como un acto de artesanía.</p>
+            <p>Somos un equipo de especialistas certificados en detallado de vehículos, con años de experiencia perfeccionando nuestro oficio. Cada miembro de nuestro equipo ha recibido capacitación avanzada de las marcas líderes mundiales en detallado.</p>
+            <p>Ubicados en Navalcarnero, nuestro compromiso es simple: tu vehículo recibirá el nivel de precisión y cuidado que merece. Utilizamos exclusivamente productos de marcas reconocidas internacionalmente certificadas, tales como ZVIZZER, System X, Koch-Chemie ...</p>
           </div>
         </section>
 
@@ -268,14 +275,14 @@ function HomePage() {
             <div>
               <h2>Contacto</h2>
               <p>📍 Navalcarnero, Madrid · C/ de la Industria 6</p>
-              <p>📞 (+34) 640 25 81 89</p>
-              <p>📧 pablogutierrezdecea@gmail.com</p>
+              <p>📞 (+34) 672083075</p>
+              <p>📧 pg.detailnavalcarnero@gmail.com</p>
               <p style={{ marginTop: '20px', fontSize: '0.9rem' }}>Horario: Lunes a Viernes, 9:00 - 18:00</p>
             </div>
             <div className="socials">
-              <a href="https://wa.me/34640258189" target="_blank" rel="noreferrer">💬 Consulta por WhatsApp</a>
+              <a href="https://wa.me/672083075" target="_blank" rel="noreferrer">💬 Consulta por WhatsApp</a>
               <a href="https://www.instagram.com/_pgdetail" target="_blank" rel="noreferrer">📷 Síguenos en Instagram</a>
-              <a href="mailto:pablogutierrezdecea@gmail.com">✉️ Envía un Email</a>
+              <a href="mailto:pg.detailnavalcarnero@gmail.com">✉️ Envía un Email</a>
             </div>
           </div>
         </section>

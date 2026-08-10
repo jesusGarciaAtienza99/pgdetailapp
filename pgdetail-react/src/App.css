@@ -18,7 +18,7 @@
   padding: 18px 40px;
   background: rgba(11, 12, 16, 0.95);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(0, 229, 255, 0.1);
+  border-bottom: 1px solid rgba(245, 176, 39, 0.1);
 }
 
 .brand {
@@ -98,7 +98,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(0, 229, 255, 0.05), transparent 50%);
+  background: radial-gradient(circle at 30% 50%, rgba(245, 176, 39, 0.05), transparent 50%);
   pointer-events: none;
 }
 
@@ -156,13 +156,13 @@
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 40px rgba(0, 229, 255, 0.2);
+  box-shadow: 0 10px 40px rgba(245, 176, 39, 0.2);
 }
 
 .button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 60px rgba(0, 229, 255, 0.4);
-  background: #00d4e8;
+  box-shadow: 0 15px 60px rgba(245, 176, 39, 0.4);
+  background: #F5B027;
 }
 
 .button-small {
@@ -217,7 +217,7 @@
 
 .card {
   background: var(--bg-secondary);
-  border: 1px solid rgba(0, 229, 255, 0.15);
+  border: 1px solid rgba(245, 176, 39, 0.15);
   border-radius: 8px;
   overflow: hidden;
   padding: 32px;
@@ -228,7 +228,7 @@
 
 .card:hover {
   border-color: var(--accent);
-  box-shadow: 0 20px 60px rgba(0, 229, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(245, 176, 39, 0.1);
   transform: translateY(-4px);
 }
 
@@ -284,7 +284,7 @@
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  border: 1px solid rgba(0, 229, 255, 0.15);
+  border: 1px solid rgba(245, 176, 39, 0.15);
   border-radius: 8px;
   transition: all 0.3s ease;
 }
@@ -310,7 +310,7 @@
   max-width: 700px;
   margin: 0 auto;
   overflow: hidden;
-  border: 1px solid rgba(0, 229, 255, 0.15);
+  border: 1px solid rgba(245, 176, 39, 0.15);
   border-radius: 8px;
 }
 
@@ -529,7 +529,7 @@
 .alert-note {
   margin: 40px 0;
   padding: 24px;
-  background: rgba(0, 229, 255, 0.05);
+  background: rgba(245, 176, 39, 0.05);
   border-left: 4px solid var(--accent);
   border-radius: 4px;
 }
@@ -559,7 +559,7 @@
   padding: 40px;
   text-align: center;
   background: #000000;
-  border-top: 1px solid rgba(0, 229, 255, 0.1);
+  border-top: 1px solid rgba(245, 176, 39, 0.1);
   color: var(--text-secondary);
   font-family: var(--font-body);
   font-size: 0.9rem;
