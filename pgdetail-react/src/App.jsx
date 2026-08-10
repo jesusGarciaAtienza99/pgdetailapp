@@ -1,15 +1,27 @@
 import { useRef, useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import logo from './resources/pgdetail_logo_blanco.png';
+import Header from './Header.jsx';
 import BeforeAfterSlider from './BeforeAfterSlider.jsx';
 import ServiceDetail from './ServiceDetail.jsx';
+import Footer from './Footer.jsx';
+import CookieConsentBanner from './CookieConsentBanner.jsx';
+import AvisoLegal from './AvisoLegal.jsx';
+import PoliticaPrivacidad from './PoliticaPrivacidad.jsx';
+import PoliticaCookies from './PoliticaCookies.jsx';
+import Presupuesto from './Presupuesto.jsx';
 import beforeCupra from './resources/cupralimpio.jpeg';
 import afterCupra from './resources/cuprasucio.jpeg';
 import beforeRenault from './resources/renaultlimpio.jpeg';
 import afterRenault from './resources/renaultsucio.jpeg';
 import before1 from './resources/a3_limpio.jpeg';
 import after1 from './resources/a3_sucio.jpeg';
+import imggaleria1 from './resources/imggaleria1.jpeg';
+import imggaleria2 from './resources/imggaleria2.jpeg';
+import imggaleria3 from './resources/imggaleria3.jpeg';
+import imggaleria4 from './resources/imggaleria4.jpeg';
+import imggaleria5 from './resources/imggaleria5.jpeg';
+import imggaleria6 from './resources/imggaleria6.jpeg';
 
 const services = [
   {
@@ -200,24 +212,28 @@ const sliderPairs = [
 
 const galleryImages = [
   {
-    src: 'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1400&q=80',
+    src: imggaleria1,
     caption: 'Trabajo de detallado con acabado semibrillante'
   },
   {
-    src: 'https://images.unsplash.com/photo-1519638399535-1b036603ac77?auto=format&fit=crop&w=1400&q=80',
+    src: imggaleria2,
     caption: 'Reflejos y limpieza profunda en superficies exteriores'
   },
   {
-    src: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80',
+    src: imggaleria3,
     caption: 'Cuidado premium en acabados de pintura y detalles'
   },
   {
-    src: 'https://images.unsplash.com/photo-1549921296-3a30fd4cecc9?auto=format&fit=crop&w=1400&q=80',
+    src: imggaleria4,
     caption: 'Vehículo con resultado limpio y preparado para entrega'
   },
   {
-    src: 'https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1400&q=80',
+    src: imggaleria5,
     caption: 'Últimos retoques antes de la entrega al cliente'
+  },
+  {
+    src: imggaleria6,
+    caption: 'Imagen adicional del resultado final de nuestro detallado'
   }
 ];
 
@@ -245,7 +261,6 @@ function GalleryCarousel({ images }) {
               ref={(el) => (itemRefs.current[index] = el)}
             >
               <img src={item.src} alt={item.caption} />
-              <div className="carousel-caption">{item.caption}</div>
             </div>
           ))}
         </div>
@@ -266,19 +281,6 @@ function GalleryCarousel({ images }) {
 function HomePage() {
   return (
     <div className="page">
-      <header className="header">
-        <Link className="brand" to="/">
-          <img src={logo} alt="PG Detail" className="logo" />
-          <span>PG Detail</span>
-        </Link>
-        <nav className="nav">
-          <a href="/#servicios">Servicios</a>
-          <a href="/#galeria">Galería</a>
-          <a href="/#nosotros">Nosotros</a>
-          <a href="/#contacto">Contacto</a>
-        </nav>
-      </header>
-
       <main>
         <section id="home" className="hero">
           <div className="hero-content">
@@ -346,25 +348,21 @@ function HomePage() {
 
         <section id="contacto" className="section section-alt">
           <div className="section-inner contact-grid">
-            <div>
+            <div className="contact-details">
               <h2>Contacto</h2>
-              <p>📍 Navalcarnero, Madrid · C/ de la Industria 6</p>
-              <p>📞 (+34) 672083075</p>
-              <p>📧 pg.detailnavalcarnero@gmail.com</p>
-              <p style={{ marginTop: '20px', fontSize: '0.9rem' }}>Horario: Lunes a Viernes, 9:00 - 18:00</p>
+              <p>📍 Navalcarnero, Madrid</p>
+              <p>📞 (+34) 672 083 075</p>
+              <p>📧 pg.detailnavalcarnero@gmail.com</p>              
             </div>
-            <div className="socials">
-              <a href="https://wa.me/672083075" target="_blank" rel="noreferrer">💬 Consulta por WhatsApp</a>
-              <a href="https://www.instagram.com/_pgdetail" target="_blank" rel="noreferrer">📷 Síguenos en Instagram</a>
-              <a href="mailto:pg.detailnavalcarnero@gmail.com">✉️ Envía un Email</a>
+            <div className="contact-cta">
+              <p>Para solicitar un presupuesto personalizado por WhatsApp, elige primero un servicio o utiliza el formulario dinámico.</p>
+              <Link className="button button-small" to="/presupuesto">
+                Solicitar presupuesto por WhatsApp
+              </Link>
             </div>
           </div>
         </section>
       </main>
-
-      <footer className="footer">
-        <p>© 2026 PG Detail. Diseñado para la excelencia. Todos los derechos reservados.</p>
-      </footer>
     </div>
   );
 }
@@ -372,11 +370,19 @@ function HomePage() {
 function App() {
   return (
     <BrowserRouter>
+      <CookieConsentBanner />
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/servicios/:slug" element={<ServiceDetail services={services} />} />
+        <Route path="/contacto" element={<Presupuesto />} />
+        <Route path="/presupuesto" element={<Presupuesto />} />
+        <Route path="/aviso-legal" element={<AvisoLegal />} />
+        <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
+        <Route path="/politica-cookies" element={<PoliticaCookies />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

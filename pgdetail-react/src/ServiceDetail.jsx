@@ -8,12 +8,6 @@ function ServiceDetail({ services }) {
   if (!service) {
     return (
       <div className="page">
-        <header className="header">
-          <Link className="brand" to="/">
-            <img src={logo} alt="PG Detail" className="logo" />
-            <span>PG Detail</span>
-          </Link>
-        </header>
         <main className="section section-alt">
           <div className="section-inner">
             <h2>Servicio no encontrado</h2>
@@ -27,19 +21,6 @@ function ServiceDetail({ services }) {
 
   return (
     <div className="page">
-      <header className="header">
-        <Link className="brand" to="/">
-          <img src={logo} alt="PG Detail" className="logo" />
-          <span>PG Detail</span>
-        </Link>
-        <nav className="nav">
-          <a href="/#servicios">Servicios</a>
-          <a href="/#galeria">Galería</a>
-          <a href="/#nosotros">Nosotros</a>
-          <a href="/#contacto">Contacto</a>
-        </nav>
-      </header>
-
       <main>
         <section className="hero hero-detail">
           <div className="hero-content">
@@ -72,15 +53,16 @@ function ServiceDetail({ services }) {
               </div>
             )}
             <div className="service-detail-footer">
-              <Link className="button" to="/">Volver a Servicios</Link>
+              <Link
+                className="button"
+                to={`/presupuesto?servicio=${encodeURIComponent(service.title)}`}
+              >
+                Solicitar presupuesto por WhatsApp
+              </Link>
             </div>
           </div>
         </section>
       </main>
-
-      <footer className="footer">
-        <p>© 2026 PG Detail. Diseñado para la excelencia. Todos los derechos reservados.</p>
-      </footer>
     </div>
   );
 }
