@@ -29,7 +29,6 @@ const services = [
     title: 'Limpieza Premium',
     description: 'Limpieza completa del vehículo.',
     image: 'https://images.unsplash.com/photo-1622015663314-2a4a3953f5a8?auto=format&fit=crop&w=800&q=80',
-    icon: '✨',
     detail: {
       subtitle: 'Servicio completo de limpieza interior y exterior, ideal para mantener tu coche en perfecto estado.',
       sections: [
@@ -59,7 +58,6 @@ const services = [
     title: 'Limpieza Integral',
     description: 'Limpieza profunda y detallada, llegando a cada rincón del vehículo.',
     image: 'https://images.unsplash.com/photo-1623688573604-7a1a71d9a421?auto=format&fit=crop&w=800&q=80',
-    icon: '🔬',
     detail: {
       subtitle: 'Con este servicio buscamos acercarnos a la perfección, realizando una limpieza profunda y detallada tanto en el interior como en el exterior del vehículo.',
       sections: [
@@ -90,7 +88,6 @@ const services = [
     title: 'Pulido de Pintura',
     description: 'Corrección profesional de la pintura para un acabado espejo.',
     image: 'https://images.unsplash.com/photo-1607860108855-0c622d584f82?auto=format&fit=crop&w=800&q=80',
-    icon: '💎',
     detail: {
       subtitle: 'El proceso inicial comienza con una limpieza profunda de la carrocería y la descontaminación de la pintura.',
       sections: [
@@ -112,7 +109,6 @@ const services = [
     title: 'Tratamiento Cerámico',
     description: 'Protección cerámica duradera que realza el brillo y repele la suciedad.',
     image: 'https://images.unsplash.com/photo-1607860263546-9ee57f245dc9?auto=format&fit=crop&w=800&q=80',
-    icon: '🛡️',
     detail: {
       subtitle: 'Las protecciones dan brillo, profundidad y resistencia frente a agentes externos como cal, mosquitos o contaminación.',
       sections: [
@@ -173,7 +169,6 @@ const services = [
     title: 'Plan de Mantenimiento',
     description: 'Programa personalizado de cuidado continuo para máxima preservación.',
     image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80',
-    icon: '⚙️',
     detail: {
       subtitle: 'Mantén tu vehículo en condiciones de concesionario con nuestro programa de mantenimiento trimestral.',
       sections: [
@@ -284,7 +279,7 @@ function HomePage() {
         <section id="home" className="hero">
           <div className="hero-content">
             <span>Cuidamos cada detalle</span>
-            <h1>Detallado de Lujo para Exigentes</h1>
+            <h1>DONDE CADA DETALLE CUENTA</h1>
             <p>Especialistas en el cuidado de tu vehículo con el más alto nivel de calidad y atención al detalle.</p>
             <a className="button" href="/#servicios">Explorar Servicios</a>
           </div>
