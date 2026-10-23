@@ -117,7 +117,7 @@ function HomePage() {
         <section id="home" className="hero">
           <div className="hero-content">
             <span>Cuidamos cada detalle</span>
-            <h1>Detallado de Lujo para Exigentes</h1>
+            <h1>DONDE CADA DETALLE CUENTA</h1>
             <p>Especialistas en el cuidado de tu vehículo con el más alto nivel de calidad y atención al detalle.</p>
             <a className="button" href="/#servicios">Explorar Servicios</a>
           </div>
