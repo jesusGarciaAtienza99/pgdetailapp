@@ -34,6 +34,12 @@ function ServiceDetail({ services }) {
           <div className="section-inner service-detail-content">
             <h2 style={{ display: 'block' }}>Detalles del Servicio</h2>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '30px' }}>{service.description}</p>
+            {service.startingPrice != null && (
+              <div className="service-price-box">
+                <span className="service-price-label">Precio desde</span>
+                <strong>{service.startingPrice} €</strong>
+              </div>
+            )}
             {service.detail.sections.map((section) => (
               <div key={section.heading} className="service-detail-list">
                 <h4>{section.heading}</h4>
