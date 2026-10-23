@@ -130,7 +130,7 @@ function HomePage() {
             <div className="cards">
               {services.map((service) => (
                 <article key={service.slug} className="card">
-                  <div className="card-icon">{service.icon}</div>
+                  {service.icon && <div className="card-icon">{service.icon}</div>}
                   <div className="card-body">
                     <h3>{service.title}</h3>
                     <p>{service.description}</p>

@@ -40,6 +40,27 @@ function ServiceDetail({ services }) {
                 <strong>{service.startingPrice} €</strong>
               </div>
             )}
+            {service.detail.paragraphs?.length > 0 && (
+              <div className="service-detail-paragraphs">
+                {service.detail.paragraphs.map((paragraph) => {
+                  const text = typeof paragraph === 'string' ? paragraph : paragraph.text;
+
+                  return (
+                    <p key={text}>
+                      {text}
+                      {typeof paragraph !== 'string' && paragraph.link && (
+                        <>
+                          {' '}
+                          <Link to={`/servicios/${paragraph.link.slug}`} className="service-inline-link">
+                            {paragraph.link.label}
+                          </Link>
+                        </>
+                      )}
+                    </p>
+                  );
+                })}
+              </div>
+            )}
             {service.detail.sections.map((section) => (
               <div key={section.heading} className="service-detail-list">
                 <h4>{section.heading}</h4>

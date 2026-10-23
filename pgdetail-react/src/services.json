@@ -36,6 +36,15 @@
     "startingPrice": 180,
     "detail": {
       "subtitle": "Con este servicio buscamos acercarnos a la perfección, realizando una limpieza profunda y detallada tanto en el interior como en el exterior del vehículo.",
+      "paragraphs": [
+        {
+          "text": "Al realizar una Limpieza Integral, tendrás el beneficio de acceder al Plan de Mantenimiento.",
+          "link": {
+            "slug": "mantenimiento-experto",
+            "label": "Descubre el Plan de Mantenimiento"
+          }
+        }
+      ],
       "sections": [
         {
           "heading": "Interior",
@@ -147,12 +156,19 @@
     "description": "Programa personalizado de cuidado continuo para máxima preservación.",
     "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
     "detail": {
-      "subtitle": "Mantén tu vehículo en condiciones de concesionario con nuestro programa de mantenimiento trimestral.",
+      "subtitle": "Mantén tu vehículo en el estado en el que sale de PG Detail.",
+      "paragraphs": [
+        "Después de realizar una Limpieza Integral, puedes acceder a nuestro plan de mantenimiento, siempre que no transcurran más de 2 meses entre servicios.",
+        "Un mantenimiento periódico permite conservar durante más tiempo la limpieza y el buen estado del vehículo, evitando que la suciedad vuelva a acumularse y reduciendo la necesidad de realizar limpiezas profundas.",
+        "Incluye: mantenimiento de interior + exterior, adaptado al estado del vehículo.",
+        "🎟️ Te entregaremos una tarjeta de fidelidad para llevar el control de tus mantenimientos.",
+        "Condición: máximo 2 meses entre visitas. El servicio de mantenimiento está disponible para clientes que hayan realizado previamente una Limpieza Integral."
+      ],
       "sections": [
         {
           "heading": "Beneficios",
           "items": [
-            "Inspección completa cada trimestre",
+            "Inspección completa en cada mantenimiento",
             "Retoques de protección cerámico",
             "Asesoría personalizada incluida"
           ]
