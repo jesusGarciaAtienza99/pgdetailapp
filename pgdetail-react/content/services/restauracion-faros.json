@@ -1,6 +1,7 @@
 {
   "slug": "restauracion-faros",
-  "title": "RESTAURACION DE FAROS",
+  "order": 4,
+  "title": "RESTAURACIÓN DE FAROS",
   "description": "Restauración y pulido profesional de faros para recuperar visibilidad y estética.",
   "detail": {
     "subtitle": "Recuperamos la transparencia y funcionalidad de tus faros mediante un proceso profesional y protección UV.",
@@ -25,6 +26,5 @@
     ],
     "note": "Servicio recomendado para mejorar seguridad y estética.",
     "extra": "Recomendamos reaplicar sellado UV cada 6-12 meses para mantener resultados óptimos."
-  },
-  "order": 4
+  }
 }
