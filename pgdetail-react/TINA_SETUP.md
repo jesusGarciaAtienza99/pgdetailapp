@@ -14,14 +14,10 @@ The React/Vite site reads its editable content from `content/home.json` and
    site and Tina's local content API run together.
 
 Changes made in local mode update the JSON and image files in this repository.
-<<<<<<< Updated upstream
-Commit and deploy those changes to publish them.
-=======
 The first local run also generates `tina/tina-lock.json`, the schema index
 required by TinaCloud. Commit and push that file with the content and schema
 before asking TinaCloud to index the repository. You do not need to run `init`
 again because this project already has its Tina configuration.
->>>>>>> Stashed changes
 
 ## TinaCloud
 
@@ -32,10 +28,19 @@ GitHub repository and configure these environment variables for CMS builds:
 - `NEXT_PUBLIC_TINA_CLIENT_ID`: the public client ID from TinaCloud.
 - `TINA_TOKEN`: the read-only content API token from TinaCloud.
 
-Set the same variables in the deployment platform. Run `npm run build:cms` for
-a production build that includes Tina's `/admin` editor and the Vite site.
-The deployment must publish the generated `dist` directory and rebuild when
-content changes are pushed or merged.
+Set the same variables in the deployment platform. In Vercel, set the Root
+Directory to `pgdetail-react` and the Output Directory to `dist`. The default
+Build Command, `npm run build`, now builds Tina's `/admin` editor and then the
+Vite site. `npm run build:cms` is an explicit alias for the same CMS-enabled
+build; `npm run build:site` builds only the public site and does not include
+the admin.
+
+The deployment must rebuild when content changes are pushed or merged so the
+public site reflects updated JSON files and images.
+
+If `/admin/index.html` returns 404 after deployment, check the Vercel build
+logs for a successful Tina build and confirm the deployment used the latest
+commit containing the CMS-enabled `build` script and `tina/tina-lock.json`.
 
 The repository does not include deployment-provider configuration or TinaCloud
 credentials. Those must be supplied by the repository owner before online
