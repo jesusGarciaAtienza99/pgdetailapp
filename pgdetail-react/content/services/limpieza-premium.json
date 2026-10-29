@@ -1,0 +1,29 @@
+{
+  "slug": "limpieza-premium",
+  "title": "Limpieza Premium",
+  "description": "Limpieza completa del vehículo.",
+  "detail": {
+    "subtitle": "Servicio completo de limpieza interior y exterior, ideal para mantener tu coche en perfecto estado.",
+    "sections": [
+      {
+        "heading": "Interior",
+        "items": [
+          "Aspirado general del habitáculo",
+          "Limpieza básica de tapicería",
+          "Limpieza general de plásticos",
+          "Limpieza de cristales interiores"
+        ]
+      },
+      {
+        "heading": "Exterior",
+        "items": [
+          "Lavado a mano del vehículo",
+          "Limpieza de llantas",
+          "Limpieza ligera de pasos de puerta"
+        ]
+      }
+    ],
+    "note": "Ideal para coches que reciben mantenimiento regular de limpieza y buscan mejorar su estado general sin un tratamiento intensivo."
+  },
+  "order": 0
+}

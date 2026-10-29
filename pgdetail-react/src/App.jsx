@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import services from './services.json';
+import { homeContent, services } from './content.js';
 import Header from './Header.jsx';
 import BeforeAfterSlider from './BeforeAfterSlider.jsx';
 import ServiceDetail from './ServiceDetail.jsx';
@@ -11,63 +11,6 @@ import AvisoLegal from './AvisoLegal.jsx';
 import PoliticaPrivacidad from './PoliticaPrivacidad.jsx';
 import PoliticaCookies from './PoliticaCookies.jsx';
 import Presupuesto from './Presupuesto.jsx';
-import beforeCupra from './resources/cupralimpio.jpeg';
-import afterCupra from './resources/cuprasucio.jpeg';
-import beforeRenault from './resources/renaultlimpio.jpeg';
-import afterRenault from './resources/renaultsucio.jpeg';
-import before1 from './resources/a3_limpio.jpeg';
-import after1 from './resources/a3_sucio.jpeg';
-import imggaleria1 from './resources/imggaleria1.jpeg';
-import imggaleria2 from './resources/imggaleria2.jpeg';
-import imggaleria3 from './resources/imggaleria3.jpeg';
-import imggaleria4 from './resources/imggaleria4.jpeg';
-import imggaleria5 from './resources/imggaleria5.jpeg';
-import imggaleria6 from './resources/imggaleria6.jpeg';
-
-const sliderPairs = [
-  {
-    title: 'Renault Antes / Después',
-    before: beforeRenault,
-    after: afterRenault
-  },
-  {
-    title: 'Cupra Antes / Después',
-    before: beforeCupra,
-    after: afterCupra
-  },
-  {
-    title: 'A3 Antes / Después',
-    before: before1,
-    after: after1
-  }
-];
-
-const galleryImages = [
-  {
-    src: imggaleria1,
-    caption: 'Trabajo de detallado con acabado semibrillante'
-  },
-  {
-    src: imggaleria2,
-    caption: 'Reflejos y limpieza profunda en superficies exteriores'
-  },
-  {
-    src: imggaleria3,
-    caption: 'Cuidado premium en acabados de pintura y detalles'
-  },
-  {
-    src: imggaleria4,
-    caption: 'Vehículo con resultado limpio y preparado para entrega'
-  },
-  {
-    src: imggaleria5,
-    caption: 'Últimos retoques antes de la entrega al cliente'
-  },
-  {
-    src: imggaleria6,
-    caption: 'Imagen adicional del resultado final de nuestro detallado'
-  }
-];
 
 function GalleryCarousel({ images }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -116,17 +59,17 @@ function HomePage() {
       <main>
         <section id="home" className="hero">
           <div className="hero-content">
-            <span>Cuidamos cada detalle</span>
-            <h1>DONDE CADA DETALLE CUENTA</h1>
-            <p>Especialistas en el cuidado de tu vehículo con el más alto nivel de calidad y atención al detalle.</p>
-            <a className="button" href="/#servicios">Explorar Servicios</a>
+            <span>{homeContent.hero.eyebrow}</span>
+            <h1>{homeContent.hero.title}</h1>
+            <p>{homeContent.hero.description}</p>
+            <a className="button" href="/#servicios">{homeContent.hero.buttonLabel}</a>
           </div>
         </section>
 
         <section id="servicios" className="section">
           <div className="section-inner">
-            <h2>Nuestros Servicios</h2>
-            <p>Cada servicio es diseñado con obsesión por los detalles. Utilizamos únicamente productos de marcas internacionales certificadas.</p>
+            <h2>{homeContent.services.title}</h2>
+            <p>{homeContent.services.description}</p>
             <div className="cards">
               {services.map((service) => (
                 <article key={service.slug} className="card">
@@ -146,10 +89,10 @@ function HomePage() {
 
         <section id="galeria" className="section section-alt">
           <div className="section-inner">
-            <h2>Antes y después</h2>
-            <p>Observa el poder de nuestro trabajo. Cada slider muestra el porcentaje real del antes y el después.</p>
+            <h2>{homeContent.gallery.title}</h2>
+            <p>{homeContent.gallery.description}</p>
             <div className="slider-grid">
-              {sliderPairs.map((pair) => (
+              {homeContent.gallery.beforeAfter.map((pair) => (
                 <BeforeAfterSlider
                   key={pair.title}
                   beforeImage={pair.before}
@@ -161,35 +104,36 @@ function HomePage() {
             <div className="gallery-section">
               <div className="gallery-header">
                 <div>
-                  <h3>Más resultados reales</h3>
-                  <p>Desliza la galería para ver más ejemplos de nuestros trabajos.</p>
+                  <h3>{homeContent.gallery.galleryTitle}</h3>
+                  <p>{homeContent.gallery.galleryDescription}</p>
                 </div>
               </div>
-              <GalleryCarousel images={galleryImages} />
+              <GalleryCarousel images={homeContent.gallery.images} />
             </div>
           </div>
         </section>
 
         <section id="nosotros" className="section">
           <div className="section-inner content-block">
-            <h2>Sobre PG Detail</h2>
-            <p>Somos un equipo de especialistas certificados en detallado de vehículos, con años de experiencia perfeccionando nuestro oficio. Cada miembro de nuestro equipo ha recibido capacitación avanzada de las marcas líderes mundiales en detallado.</p>
-            <p>Ubicados en Navalcarnero, nuestro compromiso es simple: tu vehículo recibirá el nivel de precisión y cuidado que merece. Utilizamos exclusivamente productos de marcas reconocidas internacionalmente certificadas, tales como ZVIZZER, System X, Koch-Chemie ...</p>
+            <h2>{homeContent.about.title}</h2>
+            {homeContent.about.paragraphs.map((paragraph, index) => (
+              <p key={`${index}-${paragraph}`}>{paragraph}</p>
+            ))}
           </div>
         </section>
 
         <section id="contacto" className="section section-alt">
           <div className="section-inner contact-grid">
             <div className="contact-details">
-              <h2>Contacto</h2>
-              <p>📍 Navalcarnero, Madrid</p>
-              <p>📞 (+34) 672 083 075</p>
-              <p>📧 pg.detailnavalcarnero@gmail.com</p>              
+              <h2>{homeContent.contact.title}</h2>
+              <p>📍 {homeContent.contact.location}</p>
+              <p>📞 {homeContent.contact.telephone}</p>
+              <p>📧 {homeContent.contact.email}</p>
             </div>
             <div className="contact-cta">
-              <p>Para solicitar un presupuesto personalizado por WhatsApp, elige primero un servicio o utiliza el formulario dinámico.</p>
+              <p>{homeContent.contact.description}</p>
               <Link className="button button-small" to="/presupuesto">
-                Solicitar presupuesto por WhatsApp
+                {homeContent.contact.buttonLabel}
               </Link>
             </div>
           </div>
@@ -207,14 +151,14 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/servicios/:slug" element={<ServiceDetail services={services} />} />
-        <Route path="/contacto" element={<Presupuesto />} />
-        <Route path="/presupuesto" element={<Presupuesto />} />
+        <Route path="/contacto" element={<Presupuesto whatsappNumber={homeContent.contact.whatsappNumber} />} />
+        <Route path="/presupuesto" element={<Presupuesto whatsappNumber={homeContent.contact.whatsappNumber} />} />
         <Route path="/aviso-legal" element={<AvisoLegal />} />
         <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
         <Route path="/politica-cookies" element={<PoliticaCookies />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
-      <Footer />
+      <Footer contact={homeContent.contact} footer={homeContent.footer} />
     </BrowserRouter>
   );
 }

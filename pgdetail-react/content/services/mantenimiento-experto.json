@@ -1,0 +1,37 @@
+{
+  "slug": "mantenimiento-experto",
+  "title": "Plan de Mantenimiento",
+  "description": "Programa personalizado de cuidado continuo para máxima preservación.",
+  "detail": {
+    "subtitle": "Mantén tu vehículo en el estado en el que sale de PG Detail.",
+    "paragraphs": [
+      {
+        "text": "Después de realizar una Limpieza Integral, puedes acceder a nuestro plan de mantenimiento, siempre que no transcurran más de 2 meses entre servicios."
+      },
+      {
+        "text": "Un mantenimiento periódico permite conservar durante más tiempo la limpieza y el buen estado del vehículo, evitando que la suciedad vuelva a acumularse y reduciendo la necesidad de realizar limpiezas profundas."
+      },
+      {
+        "text": "Incluye: mantenimiento de interior + exterior, adaptado al estado del vehículo."
+      },
+      {
+        "text": "🎟️ Te entregaremos una tarjeta de fidelidad para llevar el control de tus mantenimientos."
+      },
+      {
+        "text": "Condición: máximo 2 meses entre visitas. El servicio de mantenimiento está disponible para clientes que hayan realizado previamente una Limpieza Integral."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Beneficios",
+        "items": [
+          "Inspección completa en cada mantenimiento",
+          "Retoques de protección cerámico",
+          "Asesoría personalizada incluida"
+        ]
+      }
+    ],
+    "note": "La mejor inversión para preservar el valor y belleza de tu automóvil."
+  },
+  "order": 5
+}

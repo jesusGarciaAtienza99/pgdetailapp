@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "eyebrow": "Cuidamos cada detalle",
+    "title": "DONDE CADA DETALLE CUENTA",
+    "description": "Especialistas en el cuidado de tu vehículo con el más alto nivel de calidad y atención al detalle.",
+    "buttonLabel": "Explorar Servicios"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "description": "Cada servicio es diseñado con obsesión por los detalles. Utilizamos únicamente productos de marcas internacionales certificadas."
+  },
+  "gallery": {
+    "title": "Antes y después",
+    "description": "Observa el poder de nuestro trabajo. Cada slider muestra el porcentaje real del antes y el después.",
+    "beforeAfter": [
+      {
+        "title": "Renault Antes / Después",
+        "before": "/uploads/renaultlimpio.jpeg",
+        "after": "/uploads/renaultsucio.jpeg"
+      },
+      {
+        "title": "Cupra Antes / Después",
+        "before": "/uploads/cupralimpio.jpeg",
+        "after": "/uploads/cuprasucio.jpeg"
+      },
+      {
+        "title": "A3 Antes / Después",
+        "before": "/uploads/a3_limpio.jpeg",
+        "after": "/uploads/a3_sucio.jpeg"
+      }
+    ],
+    "galleryTitle": "Más resultados reales",
+    "galleryDescription": "Desliza la galería para ver más ejemplos de nuestros trabajos.",
+    "images": [
+      {
+        "src": "/uploads/imggaleria1.jpeg",
+        "caption": "Trabajo de detallado con acabado semibrillante"
+      },
+      {
+        "src": "/uploads/imggaleria2.jpeg",
+        "caption": "Reflejos y limpieza profunda en superficies exteriores"
+      },
+      {
+        "src": "/uploads/imggaleria3.jpeg",
+        "caption": "Cuidado premium en acabados de pintura y detalles"
+      },
+      {
+        "src": "/uploads/imggaleria4.jpeg",
+        "caption": "Vehículo con resultado limpio y preparado para entrega"
+      },
+      {
+        "src": "/uploads/imggaleria5.jpeg",
+        "caption": "Últimos retoques antes de la entrega al cliente"
+      },
+      {
+        "src": "/uploads/imggaleria6.jpeg",
+        "caption": "Imagen adicional del resultado final de nuestro detallado"
+      }
+    ]
+  },
+  "about": {
+    "title": "Sobre PG Detail",
+    "paragraphs": [
+      "Somos un equipo de especialistas certificados en detallado de vehículos, con años de experiencia perfeccionando nuestro oficio. Cada miembro de nuestro equipo ha recibido capacitación avanzada de las marcas líderes mundiales en detallado.",
+      "Ubicados en Navalcarnero, nuestro compromiso es simple: tu vehículo recibirá el nivel de precisión y cuidado que merece. Utilizamos exclusivamente productos de marcas reconocidas internacionalmente certificadas, tales como ZVIZZER, System X, Koch-Chemie ..."
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "location": "Navalcarnero, Madrid",
+    "telephone": "(+34) 672 083 075",
+    "whatsappNumber": "34672083075",
+    "email": "pg.detailnavalcarnero@gmail.com",
+    "description": "Para solicitar un presupuesto personalizado por WhatsApp, elige primero un servicio o utiliza el formulario dinámico.",
+    "buttonLabel": "Solicitar presupuesto por WhatsApp"
+  },
+  "footer": {
+    "businessName": "PG DETAIL",
+    "location": "Navalcarnero (Madrid)"
+  }
+}
