@@ -1,0 +1,30 @@
+{
+  "slug": "protecciones",
+  "title": "Tratamiento Cerámico",
+  "description": "Protección cerámica duradera que realza el brillo y repele la suciedad.",
+  "detail": {
+    "subtitle": "Las protecciones dan brillo, profundidad y resistencia frente a agentes externos como cal, mosquitos o contaminación.",
+    "sections": [
+      {
+        "heading": "Áreas protegidas",
+        "items": [
+          "Carrocería completa",
+          "Cristales",
+          "Plásticos exteriores",
+          "Llantas"
+        ]
+      },
+      {
+        "heading": "Productos y tratamientos",
+        "items": [
+          "Tratamientos cerámicos",
+          "Sellados protectores",
+          "Ceras de alta calidad",
+          "Productos de marcas reconocidas"
+        ]
+      }
+    ],
+    "note": "Ideal para mantener la pintura y superficies en óptimas condiciones con mayor resistencia a agentes externos."
+  },
+  "order": 3
+}

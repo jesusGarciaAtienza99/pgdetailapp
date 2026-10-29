@@ -1,0 +1,22 @@
+{
+  "slug": "pulidos-carroceria",
+  "title": "Pulido de Pintura",
+  "description": "Corrección profesional de la pintura para un acabado espejo.",
+  "startingPrice": 250,
+  "detail": {
+    "subtitle": "El proceso inicial comienza con una limpieza profunda de la carrocería y la descontaminación de la pintura.",
+    "sections": [
+      {
+        "heading": "Proceso del pulido",
+        "items": [
+          "Preparación del vehículo con limpieza y descontaminación de la pintura",
+          "Evaluación del estado de la pintura y definición del tipo de pulido",
+          "Pulido en uno, dos o tres pasos según la profundidad de los defectos",
+          "En arañazos profundos, lijado cuidadoso antes del pulido final si fuera necesario"
+        ]
+      }
+    ],
+    "note": "Ideal para coches que buscan eliminar imperfecciones, mejorar el brillo y mantener la pintura en óptimas condiciones."
+  },
+  "order": 2
+}

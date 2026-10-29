@@ -6,7 +6,7 @@ function getServiceFromQuery(search) {
   return params.get('servicio') || '';
 }
 
-export default function Presupuesto() {
+export default function Presupuesto({ whatsappNumber }) {
   const { search } = useLocation();
   const initialService = useMemo(() => getServiceFromQuery(search), [search]);
   const [formData, setFormData] = useState({
@@ -25,7 +25,7 @@ export default function Presupuesto() {
     event.preventDefault();
     const mensaje = `Hola, soy ${formData.nombre}. Me interesa el servicio de ${formData.servicio}. Mi coche es un ${formData.modelo}. Detalles adicionales: ${formData.comentarios}.`;
     const encoded = encodeURIComponent(mensaje);
-    window.location.href = `https://wa.me/34672083075?text=${encoded}`;
+    window.location.href = `https://wa.me/${whatsappNumber}?text=${encoded}`;
   };
 
   return (

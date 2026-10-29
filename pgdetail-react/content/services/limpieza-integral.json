@@ -1,0 +1,40 @@
+{
+  "slug": "limpieza-integral",
+  "title": "Limpieza Integral",
+  "description": "Limpieza profunda y detallada, llegando a cada rincón del vehículo.",
+  "startingPrice": 180,
+  "detail": {
+    "subtitle": "Con este servicio buscamos acercarnos a la perfección, realizando una limpieza profunda y detallada tanto en el interior como en el exterior del vehículo.",
+    "paragraphs": [
+      {
+        "text": "Al realizar una Limpieza Integral, tendrás el beneficio de acceder al Plan de Mantenimiento.",
+        "link": {
+          "slug": "mantenimiento-experto",
+          "label": "Descubre el Plan de Mantenimiento"
+        }
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Interior",
+        "items": [
+          "Aspirado profundo del habitáculo",
+          "Limpieza de moqueta y alfombrillas",
+          "Limpieza completa de la tapicería (tela o cuero)",
+          "Limpieza de plásticos, monturas y cinturones"
+        ]
+      },
+      {
+        "heading": "Exterior",
+        "items": [
+          "Lavado a mano del vehículo",
+          "Limpieza de llantas y pasos de rueda",
+          "Limpieza de marcos de las puertas"
+        ]
+      }
+    ],
+    "note": "Ideal para vehículos cuyo mantenimiento de limpieza no se realiza habitualmente y para coches recién comprados.",
+    "extra": "Servicio adicional disponible: retirada de asientos para limpiar en profundidad moqueta, conductos y zonas de difícil acceso."
+  },
+  "order": 1
+}
