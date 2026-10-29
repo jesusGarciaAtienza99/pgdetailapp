@@ -14,7 +14,14 @@ The React/Vite site reads its editable content from `content/home.json` and
    site and Tina's local content API run together.
 
 Changes made in local mode update the JSON and image files in this repository.
+<<<<<<< Updated upstream
 Commit and deploy those changes to publish them.
+=======
+The first local run also generates `tina/tina-lock.json`, the schema index
+required by TinaCloud. Commit and push that file with the content and schema
+before asking TinaCloud to index the repository. You do not need to run `init`
+again because this project already has its Tina configuration.
+>>>>>>> Stashed changes
 
 ## TinaCloud
 
